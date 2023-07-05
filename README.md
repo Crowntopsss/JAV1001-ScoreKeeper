@@ -22,14 +22,14 @@ To run this app, you need the following:
 1. Clone the repository or download the source code.
 
    ```shell
-   git clone[https://github.com/your-username/score-keeping-app.git
+   git clone https://github.com/your-username/JAV1001-ScoreKeeper.git
    ```
 
 2. Open Android Studio.
 
 3. Click on "Open an Existing Project".
 
-4. Navigate to the project directory and select the `score-keeping-app` folder.
+4. Navigate to the project directory and select the `JAV1001-ScoreKeeper` folder.
 
 5. Wait for Android Studio to build the project and sync the dependencies.
 
