@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Team 1 Score -->
+    <TextView
+        android:id="@+id/team1NameTextView"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Team 1 Score" />
+
+    <TextView
+        android:id="@+id/team1ScoreTextView"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="10dp"
+        android:text="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Increase Team 1 Score -->
+        <Button
+            android:id="@+id/team1IncreaseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="+" />
+
+        <!-- Decrease Team 1 Score -->
+        <Button
+            android:id="@+id/team1DecreaseButton"
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:margin="5dp"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <!-- Team 2 Score -->
+    <TextView
+        android:id="@+id/team2NameTextView"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Team 2 Score" />
+
+    <TextView
+        android:id="@+id/team2ScoreTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Increase Team 2 Score -->
+        <Button
+            android:id="@+id/team2IncreaseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="+" />
+
+        <!-- Decrease Team 2 Score -->
+        <Button
+            android:id="@+id/team2DecreaseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <!-- Points -->
+    <TextView
+        android:id="@+id/pointsNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Points" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!-- Score Options -->
+        <RadioButton
+            android:id="@+id/score1RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 point" />
+
+        <RadioButton
+            android:id="@+id/score2RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 points" />
+
+        <RadioButton
+            android:id="@+id/score3RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 points" />
+
+    </LinearLayout>
+
+</LinearLayout>
