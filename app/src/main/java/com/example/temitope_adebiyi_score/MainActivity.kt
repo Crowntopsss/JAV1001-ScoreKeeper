@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Increase and decrease Team 1 score
         binding.team1IncreaseButton.setOnClickListener {
             team1Score += scoreIncrement
             binding.team1ScoreTextView.text = team1Score.toString()
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             binding.team1ScoreTextView.text = team1Score.toString()
         }
 
+        // Increase and decrease Team 2 score
         binding.team2IncreaseButton.setOnClickListener {
             team2Score += scoreIncrement
             binding.team2ScoreTextView.text = team2Score.toString()
@@ -36,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             binding.team2ScoreTextView.text = team2Score.toString()
         }
 
+        // Radio button listeners for score options
         binding.score1RadioButton.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
                 scoreIncrement = 1
@@ -58,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // Deselects other radio buttons when one is selected
     private fun deselectOtherRadioButtons(selectedButton: CompoundButton) {
         val radioButtons = listOf(
             binding.score1RadioButton,
