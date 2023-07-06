@@ -1,6 +1,7 @@
 package com.example.temitope_adebiyi_score
 
 import android.os.Bundle
+import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.temitope_adebiyi_score.databinding.ActivityMainBinding
 
@@ -35,16 +36,39 @@ class MainActivity : AppCompatActivity() {
             binding.team2ScoreTextView.text = team2Score.toString()
         }
 
-        binding.score1RadioButton.setOnClickListener {
-            scoreIncrement = 1
+        binding.score1RadioButton.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                scoreIncrement = 1
+                deselectOtherRadioButtons(buttonView)
+            }
         }
 
-        binding.score2RadioButton.setOnClickListener {
-            scoreIncrement = 2
+        binding.score2RadioButton.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                scoreIncrement = 2
+                deselectOtherRadioButtons(buttonView)
+            }
         }
 
-        binding.score3RadioButton.setOnClickListener {
-            scoreIncrement = 3
+        binding.score3RadioButton.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                scoreIncrement = 3
+                deselectOtherRadioButtons(buttonView)
+            }
+        }
+    }
+
+    private fun deselectOtherRadioButtons(selectedButton: CompoundButton) {
+        val radioButtons = listOf(
+            binding.score1RadioButton,
+            binding.score2RadioButton,
+            binding.score3RadioButton
+        )
+
+        radioButtons.forEach { radioButton ->
+            if (radioButton != selectedButton) {
+                radioButton.isChecked = false
+            }
         }
     }
 }
